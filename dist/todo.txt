@@ -1,1 +1,7 @@
 ekki tracka dist í git
+
+Munur á verkefnum:
+
+- Ekki vite
+- erum með build í staðinn fyrir node main
+- 
