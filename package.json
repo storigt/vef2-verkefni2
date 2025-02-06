@@ -3,19 +3,32 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Lausn á verkefni 1 í vefforritun 2",
-  "main": "main.js",
+  "engines": {
+    "node": "22"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-s build:*",
+    "build:clean": "rimraf dist",
+    "build:generate": "node src/generate.js",
+    "build:copy-public": "cpy 'public/*' dist",
+    "dev": "browser-sync start --serveStatic ./dist --server --files ./dist/*.* ./dist/*.*",
+    "lint": "eslint src",
+    "test": "node --test --experimental-test-module-mocks",
+    "test:watch": "node --test --watch --experimental-test-module-mocks",
+    "test:coverage": "node --test --experimental-test-coverage --experimental-test-module-mocks"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vefforritun/vef2-2025-v1.git"
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "browser-sync": "^3.0.3",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "http-server": "14.1.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vefforritun/vef2-2025-v1/issues"
-  },
-  "homepage": "https://github.com/vefforritun/vef2-2025-v1#readme"
+  "dependencies": {
+    "cpy-cli": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1"
+
+  }
+
 }

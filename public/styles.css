@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* Reset basic elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* Container to center and contain content */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+/* Question sections styling */
+.question {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Remove default list styling for answers */
+.question ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Base styling for answer buttons */
+.answer-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Hover effect for answer buttons */
+.answer-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styling for a correct answer */
+.answer-button.correct {
+  background-color: #d4edda; /* Light green background */
+  border-color: #28a745;     /* Green border */
+  color: #155724;
+}
+
+/* Styling for an incorrect answer */
+.answer-button.incorrect {
+  background-color: #f8d7da; /* Light red background */
+  border-color: #dc3545;     /* Red border */
+  color: #721c24;
+}
+
+/* Disabled state to indicate button is not clickable */
+.answer-button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  .container {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0; /* Remove rounded corners on small screens if desired */
+    box-shadow: none; /* Optionally remove the shadow */
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .answer-button {
+    font-size: 0.9rem;
+    padding: 0.65rem 0.8rem;
+  }
+}
