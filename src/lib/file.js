@@ -1,12 +1,11 @@
-// src/lib/file.js
 
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 /**
  * Reads the file at the given path and returns its contents as a string.
- * @param {string} filePath - Path to the file.
- * @returns {Promise<string|null>} - Resolves with file contents or null if an error occurs.
+ * @param {string} filePath 
+ * @returns {Promise<string|null>} 
  */
 export async function readFile(filePath) {
   try {
@@ -21,10 +20,10 @@ export async function readFile(filePath) {
 
 /**
  * Writes the given content to the file at the specified path.
- * @param {string} filePath - Path to the file.
- * @param {string} content - The content to write.
- * @param {object} [options={}] - Options for writing the file.
- * @returns {Promise<boolean>} - Resolves with true if the file was written successfully, false otherwise.
+ * @param {string} filePath
+ * @param {string} content
+ * @param {object} [options={}]
+ * @returns {Promise<boolean>}
  */
 export async function writeFile(filePath, content, options = {}) {
   try {
@@ -39,7 +38,7 @@ export async function writeFile(filePath, content, options = {}) {
 
 /**
  * Ensures that the directory at the given path exists. Creates it (including parent directories) if necessary.
- * @param {string} dirPath - Path to the directory.
+ * @param {string} dirPath
  * @returns {Promise<void>}
  */
 export async function createDirIfNotExists(dirPath) {

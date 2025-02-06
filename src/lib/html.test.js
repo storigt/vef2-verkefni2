@@ -1,4 +1,3 @@
-// src/lib/html.test.js
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
 import {
@@ -39,7 +38,6 @@ describe('HTML module', () => {
   it('stringToHtml should wrap text in paragraph tags and handle newlines', () => {
     const input = 'Line 1\n\nLine 2';
     const result = stringToHtml(input);
-    // Expecting paragraphs around each double newline-separated block
     assert.ok(result.includes('<p>Line 1</p>'));
     assert.ok(result.includes('<p>Line 2</p>'));
   });
@@ -58,11 +56,8 @@ describe('HTML module', () => {
       ]
     };
     const result = questionsCategoryTemplate(category);
-    // Check that the category title is included
     assert.ok(result.includes('Sample Category'));
-    // Check that the question text is included
     assert.ok(result.includes('What is 2+2?'));
-    // Check that answer buttons include correct data attributes
     assert.ok(result.includes('data-correct="true"'));
     assert.ok(result.includes('data-correct="false"'));
   });

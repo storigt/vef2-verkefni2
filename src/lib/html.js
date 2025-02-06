@@ -1,10 +1,8 @@
-// src/lib/html.js
-
 /**
  * Generates a full HTML document with a given title and body content.
- * @param {string} title - The title of the page.
- * @param {string} body - The HTML content of the page.
- * @returns {string} - The complete HTML document as a string.
+ * @param {string} title
+ * @param {string} body
+ * @returns {string}
  */
 export function template(title, body) {
     return /* html */ `<!DOCTYPE html>
@@ -24,9 +22,8 @@ export function template(title, body) {
   
   /**
    * Generates the index page HTML given an array of category objects.
-   * Each category object should have at least 'title' and 'file' properties.
    * @param {Array<{ title: string, file: string }>} categories
-   * @returns {string} - The complete HTML for the index page.
+   * @returns {string}
    */
   export function indexTemplate(categories) {
     const body = /* html */ `
@@ -81,7 +78,7 @@ export function template(title, body) {
    * Each answer should have an 'answer' property and a 'correct' boolean.
    *
    * @param {{ title: string, questions: Array<{ question: string, answers: Array<{ answer: string, correct: boolean }> }> }} category
-   * @returns {string} - The complete HTML for the category page.
+   * @returns {string}
    */
   export function questionsCategoryTemplate(category) {
     const questionsHtml = category.questions

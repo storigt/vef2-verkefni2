@@ -1,12 +1,6 @@
-// src/lib/parse.js
-
 /**
  * Parses the content of the index.json file.
- * The file is expected to be an array of objects, each with:
- *  - title: string
- *  - file: string
- *
- * @param {string} content - Raw JSON string from index.json
+ * @param {string} content
  * @returns {Array<{ title: string, file: string }>}
  */
 export function parseIndexFile(content) {
@@ -54,7 +48,7 @@ export function parseIndexFile(content) {
  *          - answer: string
  *          - correct: boolean (and exactly one answer should be correct)
  *
- * @param {string} content - Raw JSON string from a category file (e.g., html.json)
+ * @param {string} content
  * @returns {{ title: string, questions: Array<{ question: string, answers: Array<{ answer: string, correct: boolean }> }> } | null}
  */
 export function parseQuestionsCategory(content) {

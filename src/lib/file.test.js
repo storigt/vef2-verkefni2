@@ -1,4 +1,3 @@
-// src/lib/file.test.js
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
 import { createDirIfNotExists, readFile, writeFile } from './file.js';
