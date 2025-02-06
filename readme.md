@@ -6,7 +6,7 @@
 
 1. Klónaðu verkefnið af GitHub.
 2. Keyrðu `npm install` til að sækja nauðsynlega pakka.
-3. Til að byggja verkefnið, keyrðu:`npm run build` Þetta mun búa til `dist/` mappuna með afleiddu HTML skrám.
+3. Til að byggja verkefnið, keyrðu:`npm run build` Þetta mun búa til `dist/` möppuna með HTML skrám.
 4. Til að keyra próf:`npm run test`
 
 ## Tæki
